@@ -1,0 +1,30 @@
+{
+  "name": "@gstarp/usex",
+  "version": "0.1.0",
+  "description": "UseX is a collection of hook utilities for quick and smart development.",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "npm publish --access public"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^5.30.7",
+    "eslint": "^8.20.0",
+    "rollup": "^2.77.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/GStarP/UseX.git",
+  "author": "GStarP",
+  "keywords": [
+    "hook",
+    "utils"
+  ]
+}

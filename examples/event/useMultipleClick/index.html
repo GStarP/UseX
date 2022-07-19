@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <title>UseX | useMultipleClick</title>
+  <script type="module" src="../../../dist/usex.prod.js"></script>
+</head>
+
+<body>
+  <style>
+    #el {
+      width: 480px;
+      height: 240px;
+      border: 1px solid #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      user-select: none;
+      font-size: 2rem;
+    }
+  </style>
+
+  <div id="el">Click Here</div>
+  <button onclick="bind()">Bind</button>
+  <button onclick="unbind()">Unbind</button>
+
+  <script>
+    const el = document.getElementById('el')
+    function onMultipleClick(e) {
+      console.log(e)
+      el.innerText = `${e.clicks.length} clicks in ${(e.clicks[e.clicks.length - 1].time - e.clicks[0].time) | 0} ms`
+    }
+    let clear = null
+    function bind() {
+      console.log('multiple click event binded')
+      clear = UseX.useMultipleClick(el, onMultipleClick)
+    }
+    function unbind() {
+      console.log('unbinded')
+      if (clear) clear()
+      clear = null
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "ignorePatterns": ["node_modules"],
+    "rules": {
+        "comma-dangle": ["error", "never"],
+        "no-unused-vars": "off"
+    },
+    "extends": [
+        "eslint:recommended"
+    ]
+}
