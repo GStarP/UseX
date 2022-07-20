@@ -53,8 +53,8 @@ export function useMultipleClick(
     }
   }
 
-  el.addEventListener("click", clickHandler);
+  el.addEventListener('click', clickHandler);
   return () => {
-    el.removeEventListener("click", clickHandler);
+    el.removeEventListener('click', clickHandler);
   };
 }

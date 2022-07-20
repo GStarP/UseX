@@ -4,8 +4,10 @@
         "es6": true
     },
     "parser": "@typescript-eslint/parser",
-    "ignorePatterns": ["node_modules"],
+    "ignorePatterns": ["node_modules", "dist"],
     "rules": {
+        "semi": ["error", "always"],
+        "quotes": ["error", "single"],
         "comma-dangle": ["error", "never"],
         "no-unused-vars": "off"
     },

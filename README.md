@@ -30,10 +30,10 @@ npm i
 npm run build
 ```
 
-Then you can import `dist/usex.prod.js` in `.html` file and acceess hook utilities by `UseX`.
+Then you can import `dist/usex.min.js` in `.html` file and acceess hook utilities by `UseX`.
 
 ```html
-<script src="usex.prod.js"></script>
+<script src="usex.min.js"></script>
 <script>
   UseX.useMultipleClick(el, cb)
 </script>

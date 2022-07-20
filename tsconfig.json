@@ -1,8 +1,13 @@
 /* Visit https://aka.ms/tsconfig to read more about this file */
 { 
+  "include": ["src"],
+  "exclude": ["node_modules"],
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "declaration": true,
+    "outDir": "./lib",
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
