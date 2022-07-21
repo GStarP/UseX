@@ -1,0 +1,26 @@
+<html>
+
+<head>
+  <title>UseX | useEventBus</title>
+  <script src="../../../dist/usex.min.js"></script>
+</head>
+
+<body>
+  <style>
+    #el {
+      font-size: 2rem;
+    }
+  </style>
+
+  <div id="el"></div>
+  
+  <script>
+    const { on, emit } = UseX.useEventBus()
+    const el = document.getElementById('el')
+    on('hello', (e) => { el.innerText = `${e.type} ${e.data}` })
+    emit('hello', 'world');
+    setTimeout(() => emit('hello', { name: 'zzn', toString() { return this.name } }), 2000)
+  </script>
+</body>
+
+</html>
