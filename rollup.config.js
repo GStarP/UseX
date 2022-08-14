@@ -1,5 +1,3 @@
-import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
 import ts from 'rollup-plugin-typescript2';
 import { terser } from 'rollup-plugin-terser';
 
@@ -12,9 +10,6 @@ export default [
       format: 'esm'
     },
     plugins: [
-      // import external dependencies
-      resolve(),
-      commonjs(),
       // parse typescript and generate .d.ts
       ts()
     ]
